@@ -1,0 +1,14 @@
+.compare-panel {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 13em;
+}
+
+.compare-panel__body {
+    width: 100%;
+    position: absolute;
+    top: 9em;
+    bottom: 0;
+    user-select: none;
+}

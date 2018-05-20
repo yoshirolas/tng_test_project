@@ -1,0 +1,658 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Tangiblee | Sell More with Relative Size Comparison</title>
+</head>
+<body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script>
+        var modes = {
+            "product": {
+                items: [
+                    {
+                        id: 1221,
+                        name: "Lula Lunch Bag",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1221/front_1447873865_128x128.png",
+                            width: 203,
+                            height: 216
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1221/front_1447873865.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[480,480],[240,240],[192,192],[168,168],[160,160],[154,154],[144,144],[135,135],[128,128],[116,116],[112,112],[109,109],[96,96],[85,85]
+                                ],
+                                "imgWidth": 1060,
+                                "imgHeight": 1730,
+                                "size": 216,
+                                "pointA": {
+                                    "x": -0.05,
+                                    "y": 0.362
+                                },
+                                "pointB": {
+                                    "x": -0.05,
+                                    "y": 0.99
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 216,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.05,
+                                            "y": 0.362
+                                        },
+                                        "pointB": {
+                                            "x": -0.05,
+                                            "y": 0.99
+                                        }
+                                    },
+                                    {
+                                        "size": 203,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.005,
+                                            "y": 1.026
+                                        },
+                                        "pointB": {
+                                            "x": 0.947,
+                                            "y": 1.026
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1093,
+                        name: "Dasani 16.9oz",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1093/front_128x128.png",
+                            height: 175
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1093/front.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 438,
+                                "imgHeight": 1530,
+                                "size": 175.26,
+                                "pointA": {
+                                    "x": -0.05,
+                                    "y": 0.006
+                                },
+                                "pointB": {
+                                    "x": -0.05,
+                                    "y": 0.981
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 175.26,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.05,
+                                            "y": 0.006
+                                        },
+                                        "pointB": {
+                                            "x": -0.05,
+                                            "y": 0.981
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1,
+                        name: 'iPad Air (9.7")',
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1/front_1470743517_128x128.png",
+                            width: 169.5,
+                            height: 240
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1/front_1470743517.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 924,
+                                "imgHeight": 1310,
+                                "size": 240,
+                                "pointA": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "pointB": {
+                                    "x": 0,
+                                    "y": 1
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 169.5,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.003,
+                                            "y": 1.02
+                                        },
+                                        "pointB": {
+                                            "x": 1.01,
+                                            "y": 1.02
+                                        }
+                                    },
+                                    {
+                                        "size": 240,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": 0,
+                                            "y": 0
+                                        },
+                                        "pointB": {
+                                            "x": 0,
+                                            "y": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "left",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1/left_1470743517.png",
+                                imageSizes: [
+                                ],
+                                "imgWidth": 41,
+                                "imgHeight": 1297,
+                                "size": 240,
+                                "pointA": {
+                                    "x": 1.007,
+                                    "y": 0
+                                },
+                                "pointB": {
+                                    "x": 1.007,
+                                    "y": 1
+                                },
+                                active: false,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 7.5,
+                                        "dimensionType": "Depth",
+                                        "pointA": {
+                                            "x": 0,
+                                            "y": 1
+                                        },
+                                        "pointB": {
+                                            "x": 1,
+                                            "y": 1
+                                        }
+                                    },
+                                    {
+                                        "size": 240,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": 0,
+                                            "y": 0
+                                        },
+                                        "pointB": {
+                                            "x": 0,
+                                            "y": 1
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "landscape",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1/landscape_1470743517.png",
+                                imageSizes: [
+                                ],
+                                "imgWidth": 922,
+                                "imgHeight": 1308,
+                                "size": 240,
+                                "pointA": {
+                                    "x": -0.048,
+                                    "y": 0
+                                },
+                                "pointB": {
+                                    "x": -0.048,
+                                    "y": 1
+                                },
+                                active: false,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 169.5,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0,
+                                            "y": 1.043
+                                        },
+                                        "pointB": {
+                                            "x": 1,
+                                            "y": 1.043
+                                        }
+                                    },
+                                    {
+                                        "size": 240,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": 1.05,
+                                            "y": 0.008
+                                        },
+                                        "pointB": {
+                                            "x": 1.05,
+                                            "y": 0.999
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1092,
+                        name: "Composition Notebook",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1092/front_128x128.png",
+                            width: 169.5,
+                            height: 240
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1092/front.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240]
+                                ],
+                                "imgWidth": 296,
+                                "imgHeight": 380,
+                                "size": 247.65,
+                                "pointA": {
+                                    "x": -0.05,
+                                    "y": 0.007
+                                },
+                                "pointB": {
+                                    "x": -0.05,
+                                    "y": 1.009
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 247.65,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.05,
+                                            "y": 0.007
+                                        },
+                                        "pointB": {
+                                            "x": -0.05,
+                                            "y": 1.009
+                                        }
+                                    },
+                                    {
+                                        "size": 190.5,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.002,
+                                            "y": 1.025
+                                        },
+                                        "pointB": {
+                                            "x": 1.009,
+                                            "y": 1.025
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1229,
+                        name: "Tracker Pencil Case",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1229/front_1448368206_128x128.png",
+                            width: 229,
+                            height: 114
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1229/front_1448368206.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 1609,
+                                "imgHeight": 879,
+                                "size": 229,
+                                "pointA": {
+                                    "x": 0.029,
+                                    "y": 1.047
+                                },
+                                "pointB": {
+                                    "x": 0.976,
+                                    "y": 1.047
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 114,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.036,
+                                            "y": 0.174
+                                        },
+                                        "pointB": {
+                                            "x": -0.036,
+                                            "y": 0.996
+                                        }
+                                    },
+                                    {
+                                        "size": 229,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.031,
+                                            "y": 1.033
+                                        },
+                                        "pointB": {
+                                            "x": 0.969,
+                                            "y": 1.033
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 1220,
+                        name: "Binder",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1220/front_1447939909_128x128.png",
+                            width: 292.1,
+                            height: 317.5
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1220/front_1447939909.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 515,
+                                "imgHeight": 594,
+                                "size": 317.5,
+                                "pointA": {
+                                    "x": -0.018,
+                                    "y": 0.005
+                                },
+                                "pointB": {
+                                    "x": -0.018,
+                                    "y": 0.986
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 317.5,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.018,
+                                            "y": 0.005
+                                        },
+                                        "pointB": {
+                                            "x": -0.018,
+                                            "y": 0.986
+                                        }
+                                    },
+                                    {
+                                        "size": 292.1,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": -0.002,
+                                            "y": 1.006
+                                        },
+                                        "pointB": {
+                                            "x": 0.984,
+                                            "y": 1.006
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1304,
+                        "name": "Walworth Auburn Power Rocker Recliner",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1304/front_1476285632_128x128.png",
+                            width: 1092.2,
+                            height: 1066.8
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1304/front_1476285632.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 1898,
+                                "imgHeight": 1861,
+                                "size": 1066.8,
+                                "pointA": {
+                                    "x": 0.327,
+                                    "y": 1.004
+                                },
+                                "pointB": {
+                                    "x": 0.327,
+                                    "y": 0.19
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 1092.2,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.334,
+                                            "y": 1.021
+                                        },
+                                        "pointB": {
+                                            "x": 0.969,
+                                            "y": 0.916
+                                        }
+                                    },
+                                    {
+                                        "size": 1016,
+                                        "dimensionType": "Depth",
+                                        "pointA": {
+                                            "x": -0.013,
+                                            "y": 0.819
+                                        },
+                                        "pointB": {
+                                            "x": 0.276,
+                                            "y": 1.049
+                                        }
+                                    },
+                                    {
+                                        "size": 1066.8,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": -0.034,
+                                            "y": 0.034
+                                        },
+                                        "pointB": {
+                                            "x": -0.034,
+                                            "y": 0.807
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1308,
+                        "name": "Sterling Trees Hand Painted Art",
+                        itemBoxThumb: {
+                            url: "//cdn.tangiblee.com/yruler-references-pictures/1308/front_1477648260_128x128.png",
+                            "width": 914.4,
+                            "height": 1270
+                        },
+                        projections: [
+                            {
+                                "name": "front",
+                                "url": "//cdn.tangiblee.com/yruler-references-pictures/1308/front_1477648260.png",
+                                imageSizes: [
+                                    [48,48],[56,56],[64,64],[72,72],[75,75],[80,80],[82,82],[84,84],[85,85],[96,96],[109,109],[112,112],[116,116],[128,128],[135,135],[144,144],[154,154],[160,160],[168,168],[192,192],[240,240],[480,480]
+                                ],
+                                "imgWidth": 489,
+                                "imgHeight": 677,
+                                "size": 1270,
+                                "pointA": {
+                                    "x": -0.033,
+                                    "y": 0
+                                },
+                                "pointB": {
+                                    "x": -0.033,
+                                    "y": 0.993
+                                },
+                                active: true,
+                                rotation: 0,
+                                "measures": [
+                                    {
+                                        "size": 914.4,
+                                        "dimensionType": "Width",
+                                        "pointA": {
+                                            "x": 0.02,
+                                            "y": -0.034
+                                        },
+                                        "pointB": {
+                                            "x": 1.011,
+                                            "y": -0.034
+                                        }
+                                    },
+                                    {
+                                        "size": 1270,
+                                        "dimensionType": "Height",
+                                        "pointA": {
+                                            "x": 1.018,
+                                            "y": 0.002
+                                        },
+                                        "pointB": {
+                                            "x": 1.018,
+                                            "y": 1.007
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+        
+        var defaultMode = "product";
+        var product = {
+            id: 'BP4159-487',
+            name: "Jody Sling Backpack",
+            domain: "www.demo.com",
+            category:  {id: 2, name: "backpacks"},
+            topCategory:  {id: 1, name: "bags"},
+            gender: "female",
+            itemBoxThumb: {
+                url: "//cdn.tangiblee.com/yruler-merger-dev/Bags/Textures/1328415/Front_1505113989.png",
+                width: 209.6,
+                height: 336.6
+            },
+            projections: [
+                {
+                    name: "Front",
+                    compareMode: null,
+                    "url": "//cdn.tangiblee.com/yruler-merger-dev/Bags/Textures/1328415/Front_1505113989.png",
+                    imageSizes: [
+                    ],
+                    imgWidth: 944,
+                    imgHeight: 1802,
+                    size: 336.6,
+                    pointA: {
+                        x: 0.01,
+                        y: 0.168
+                    },
+                    pointB: {
+                        x: 0.01,
+                        y: 1
+                    },
+                    active: true,
+                    rotation: 0,
+                    "measures": [
+                        {
+                            "size": 209.6,
+                            "sizeInches": 8.25,
+                            "dimensionType": "Width",
+                            "pointA": {
+                                "x": 0.003,
+                                "y": 1
+                            },
+                            "pointB": {
+                                "x": 0.994,
+                                "y": 1
+                            }
+                        },
+                        {
+                            "size": 336.6,
+                            "sizeInches": 13.25,
+                            "dimensionType": "Height",
+                            "pointA": {
+                                "x": 0,
+                                "y": 0.168
+                            },
+                            "pointB": {
+                                "x": 0,
+                                "y": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+</html>

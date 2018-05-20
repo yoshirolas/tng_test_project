@@ -1,0 +1,15 @@
+.draggable {
+    position: absolute;
+    cursor: move;
+    transition: opacity 0.3s;
+}
+
+.draggable--dragging {
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+
+.item__canvas {
+    background: #F6F6F6;
+    margin: 3em 3em 3em 3em;
+}

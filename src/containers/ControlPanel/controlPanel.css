@@ -1,0 +1,40 @@
+/*#region Scroller */
+
+.iscroll-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+    .iscroll-wrap ul {
+        margin: 0;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .iscroll-wrap li {
+        display: block;
+        float: left;
+        width: 15em;
+        height: 100%;
+        border-left: 1px solid #d8d8d8;
+        position: relative;
+        white-space: normal;
+    }
+
+        .iscroll-wrap li:last-child {
+            border-right: 1px solid #d8d8d8;
+        }
+
+/*#endregion*/
+
+.control-panel {
+    width: 100%;
+    height: 13em;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #d8d8d8;
+}
