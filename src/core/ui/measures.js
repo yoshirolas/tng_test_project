@@ -1,4 +1,4 @@
-import { distanceBetweenPoints, mmToIn } from '../utils';
+import { distanceBetweenPoints, mmToIn, mmToCm } from '../utils';
 import { 
     ITEM_MARGIN_TOP,
     ITEM_MARGIN_LEFT,
@@ -26,7 +26,7 @@ const getMeasureDimensions = (measureWidth, captionText, verticalMeasure) => {
     };
 };
 
-export const measures = (item, size) => {
+export const measures = (item, size, measureMode) => {
     const projection = item.projections.filter((p) => p.active)[0];
     return projection.measures.map((measure) => {
         // calculate width
@@ -49,9 +49,12 @@ export const measures = (item, size) => {
         );
 
         //setup text labels
-        let text = {
-            caption: `${mmToIn(measure.size)} in`
-        };
+        const text = { caption: '' };
+        if (measureMode === 'inch') {
+            text.caption = `${mmToIn(measure.size)} in`
+        } else if (measureMode === 'cm') {
+            text.caption = `${mmToCm(measure.size)} cm`
+        }
         const { arrowWidth, textOffsetX, textOffsetY } = getMeasureDimensions(measureWidth, text.caption, verticalMeasure);
         text.top = `${textOffsetY}px`;
         text.left = `${textOffsetX}px`;

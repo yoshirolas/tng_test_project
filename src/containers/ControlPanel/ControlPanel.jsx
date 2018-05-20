@@ -39,7 +39,13 @@ export class ControlPanel extends Component {
                             {
                                 Object.keys(this.props.modes).map(mode =>
                                     this.props.modes[mode].items.map(item => 
-                                        <ItemBox item={item} isActive={this.isItemActive(item)} onHovered={this.itemHoveredHandler.bind(this, item, mode)} />
+                                        <ItemBox 
+
+                                            item={item} 
+                                            isActive={this.isItemActive(item)} 
+                                            measureMode={this.props.measureMode}
+                                            onHovered={this.itemHoveredHandler.bind(this, item, mode)} 
+                                        />
                                     )
                                 )
                             }
@@ -54,7 +60,8 @@ export class ControlPanel extends Component {
 let mapStateToProps = (state) => {
     return {
         modes: state.ControlPanel.modes,
-        currentItems: state.ControlPanel.currentItems
+        currentItems: state.ControlPanel.currentItems,
+        measureMode: state.ViewSettingsPanel.measureMode,
     };
 };
 

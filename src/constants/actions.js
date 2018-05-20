@@ -2,3 +2,4 @@
 export const SWITCH_ITEM = 'SWITCH_ITEM';
 export const ADD_ITEM = 'ADD_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const SET_MEASURE_MODE = 'SET_MEASURE_MODE';

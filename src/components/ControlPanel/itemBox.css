@@ -55,6 +55,16 @@
 
 .item-box--active .item-box__content-overlay {
     display: flex;
+    animation: showContentOverlay 0.3s ease;
+}
+
+@keyframes showContentOverlay {
+    from {
+        top: 13em;
+    }
+    to {
+        top: 0;
+    }
 }
 
 .content-overlay__title {

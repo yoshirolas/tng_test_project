@@ -1,5 +1,5 @@
 import React from 'react';
-import {mmToIn} from '../../core/utils';
+import { mmToIn, mmToCm } from '../../core/utils';
 import './itemBox.css';
 
 export const ItemBox = (props) => {
@@ -8,6 +8,17 @@ export const ItemBox = (props) => {
         width: productIsWiderThanLarger ? '7em' : 'auto',
         height:  productIsWiderThanLarger ? 'auto' : '7em'
     }
+    let unitOfMeasurement = '';
+    const setMeasureValue = (value) => {
+        if (props.measureMode === 'cm') {
+            unitOfMeasurement = 'cm';
+            return mmToCm(value);
+        } else if (props.measureMode === 'inch') {
+            unitOfMeasurement = 'in';
+            return mmToIn(value);
+        } else return;
+    }
+
     return (
         <li>
             <a onMouseOver={props.onHovered} className={props.isActive ? 'item-box item-box--active' : 'item-box'}>
@@ -22,8 +33,14 @@ export const ItemBox = (props) => {
                 <div className="item-box__content-overlay">
                     <div className="content-overlay__title">
                         <span className="item-box__title">
-                            {props.item.itemBoxThumb.width && <span>W: {mmToIn(props.item.itemBoxThumb.width)} in</span>}&nbsp;
-                            {props.item.itemBoxThumb.height && <span>H: {mmToIn(props.item.itemBoxThumb.height)} in</span>}
+                            {props.item.itemBoxThumb.width && 
+                            <span>
+                                W: {setMeasureValue(props.item.itemBoxThumb.width)} {unitOfMeasurement}
+                            </span>}&nbsp;
+                            {props.item.itemBoxThumb.height && 
+                            <span>
+                                H: {setMeasureValue(props.item.itemBoxThumb.height)} {unitOfMeasurement}
+                            </span>}
                         </span>
                     </div>
                 </div>

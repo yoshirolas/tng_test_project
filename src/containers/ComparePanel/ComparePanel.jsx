@@ -26,6 +26,7 @@ export class ComparePanel extends Component {
                 item={item} 
                 calculations={ calculations(width, height) } 
                 bodySize = {{width, height}}
+                measureMode={this.props.measureMode}
             />)
     }
 
@@ -48,7 +49,8 @@ let mapStateToProps = (state) => {
     return {
         currentMode: state.ControlPanel.currentMode,
         currentItems: state.ControlPanel.currentItems,
-        product: state.ComparePanel.product
+        product: state.ComparePanel.product,
+        measureMode: state.ViewSettingsPanel.measureMode,
     };
 };
 
