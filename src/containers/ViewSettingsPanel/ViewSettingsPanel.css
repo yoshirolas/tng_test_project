@@ -24,3 +24,10 @@
   width: 50px;
   cursor: pointer;
 }
+
+@media screen and (orientation: landscape) { 
+  .viewSettings-panel {
+      width: calc(100vw - 15em);
+      bottom: 0;
+  }
+}

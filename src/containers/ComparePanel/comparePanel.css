@@ -12,3 +12,17 @@
     bottom: 0;
     user-select: none;
 }
+
+@media screen and (orientation: landscape) { 
+	.compare-panel {
+			width: calc(100vw - 15em);
+			height: calc(100vh - 4em);
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 15em;
+	}
+	.compare-panel__body {
+			height: calc(100vh - 13em);
+	}
+}

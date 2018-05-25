@@ -7,8 +7,8 @@ import ReactIScroll from 'react-iscroll';
 import iScroll from 'iscroll';
 import './controlPanel.css';
 
-export class ControlPanel extends Component {
 
+export class ControlPanel extends Component {
     itemHoveredHandler(item, mode) {
         if (!this.props.currentItems.filter(i => i.id === item.id).length) {
             this.props.switchItem(item, mode);
@@ -21,6 +21,7 @@ export class ControlPanel extends Component {
 
     render() {
         const itemWidth = 15;
+        const itemHeight = 13;
         const computedWidth = itemWidth * Object.keys(this.props.modes).reduce((sum, mode) => {
             return sum + this.props.modes[mode].items.length;
         }, 0) + 'em';
@@ -30,11 +31,24 @@ export class ControlPanel extends Component {
             scrollX: true,
             scrollY: false
         };
+        //media query for landscape orientation
+        const mediaQuery = window.matchMedia( "(orientation: landscape)" );
+        let computedHeight;
+        if (mediaQuery.matches) {
+            computedHeight = itemHeight * Object.keys(this.props.modes).reduce((sum, mode) => {
+                return sum + this.props.modes[mode].items.length;
+            }, 0) + 'em';
+            options.scrollX = false;
+            options.scrollY = true;
+        }
 
         return (
             <div className="control-panel">
                 <ReactIScroll iScroll={iScroll} options={options}>
-                    <div className="iscroll-wrap" style={{ width: computedWidth }}>
+                    <div 
+                        className="iscroll-wrap" 
+                        style={mediaQuery.matches ? { height: computedHeight } : { width: computedWidth }}
+                    >
                         <ul>
                             {
                                 Object.keys(this.props.modes).map(mode =>

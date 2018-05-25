@@ -13,6 +13,7 @@
         height: 100%;
         white-space: nowrap;
         overflow: hidden;
+        display: flex;
     }
 
     .iscroll-wrap li {
@@ -37,4 +38,23 @@
     position: absolute;
     bottom: 0;
     border-top: 1px solid #d8d8d8;
+}
+
+@media screen and (orientation: landscape) { 
+    .control-panel {
+        right: 0;
+        top: 0;
+        width: 15em;
+        height: 100vh;
+        border-left: 1px solid #d8d8d8;
+        border-top: none;
+    }
+
+    .iscroll-wrap ul {
+        flex-direction: column;
+    }
+
+    .iscroll-wrap li {
+        height: 13em;
+    }
 }

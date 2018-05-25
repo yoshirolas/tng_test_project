@@ -71,3 +71,20 @@
     width: 100%;
     text-align: center;
 }
+
+@media screen and (orientation: landscape) { 
+    .item-box__content-overlay {
+        border-top: none;
+        border-left: 6px solid #0e93dd;
+
+    }
+
+    @keyframes showContentOverlay {
+        from {
+            left: 15em;
+        }
+        to {
+            left: 0;
+        }
+    }
+}
